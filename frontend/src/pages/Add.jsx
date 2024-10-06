@@ -23,7 +23,7 @@ const AddEmployee = () => {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:10000/api/employee/createEmployee", data);
+            const response = await axios.post("https://add-employee.onrender.com/api/employee/createEmployee", data);
 
             if (response.data.success) {
                 setData({

@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Step 2: Configure CORS
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with your frontend's URL
+  origin: "https://add-employee-rho.vercel.app", // Replace with your frontend's URL
   credentials: true, // This allows cookies to be sent from the frontend
 };
 app.use(cors(corsOptions)); // Step 3: Use cors middleware

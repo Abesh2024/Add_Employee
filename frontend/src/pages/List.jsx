@@ -8,7 +8,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await fetch("http://localhost:10000/api/employee/getEmployees");
+        const response = await fetch("https://add-employee.onrender.com/api/employee/getEmployees");
         const data = await response.json();
         if (response.ok) {
           setEmployees(data.employeeList);
@@ -27,7 +27,7 @@ const Dashboard = () => {
     const isConfirmed = window.confirm("Are you sure you want to delete this employee?");
     if (isConfirmed) {
       try {
-        const response = await fetch("http://localhost:10000/api/employee/deleteEmployee", {
+        const response = await fetch("https://add-employee.onrender.com/api/employee/deleteEmployee", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
